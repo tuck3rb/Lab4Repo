@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CanvasScript : MonoBehaviour
 {
 
+    public TextMeshProUGUI counter;
     void Awake(){
         if (GameManager.Instance.canvas == null){
             GameManager.Instance.canvas = gameObject;
-            //GameManager.Instance.dialogBox = gameObject.
+            GameManager.Instance.ScoreText = counter;
+           // GameManager.Instance.dialogBox = gameObject.GetComponent<DialogText>;
         }
     }
     
