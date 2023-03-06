@@ -13,9 +13,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI dialogText;
     public GameObject curtain;
     public GameObject canvas;
+    public TextMeshProUGUI ScoreText;
+    private int score;
     private bool raiseLower = false;
-    public GameObject mainScreen;
-    public GameObject menuButton;
+    //public GameObject mainScreen;
+    //public GameObject menuButton;
 
     public void DialogShow(string text) {
         dialogBox.SetActive(true);
@@ -87,6 +89,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadYourAsyncScene(scene));
     }
 
+    public void incScore(){
+        score++;
+        ScoreText.text = "Score: " + score;
+    }
     // Start is called before the first frame update
     void Start()
     {
