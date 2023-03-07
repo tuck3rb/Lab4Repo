@@ -7,10 +7,12 @@ public class CanvasScript : MonoBehaviour
 {
 
     public TextMeshProUGUI counter;
+    public GameObject curtain;
     void Awake(){
         if (GameManager.Instance.canvas == null){
             GameManager.Instance.canvas = gameObject;
             GameManager.Instance.ScoreText = counter;
+            GameManager.Instance.curtain = curtain;
            // GameManager.Instance.dialogBox = gameObject.GetComponent<DialogText>;
         }
     }
