@@ -3845,7 +3845,7 @@ MonoBehaviour:
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
   curtain: {fileID: 388881450}
-  canvas: {fileID: 840115715}
+  canvas: {fileID: 0}
   ScoreText: {fileID: 0}
 --- !u!4 &1951052626
 Transform:
