@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
         score++;
         ScoreText.text = "Score: " + score;
     }
+    
     // Start is called before the first frame update
     void Start()
     {

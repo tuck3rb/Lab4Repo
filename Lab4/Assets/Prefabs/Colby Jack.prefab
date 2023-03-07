@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 51728205}
   - component: {fileID: 51728206}
   - component: {fileID: 51728202}
-  - component: {fileID: 8397402161077067187}
+  - component: {fileID: -4790243627388541530}
+  - component: {fileID: 6814668243473111574}
   m_Layer: 0
   m_Name: Colby Jack
   m_TagString: Untagged
@@ -147,13 +148,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 63384641190b8754f88cfbc8ff2968fe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.378
+  m_Volume: 0.739
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 256
+  Priority: 167
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 50
@@ -231,7 +232,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8397402161077067187
+--- !u!114 &-4790243627388541530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,9 +241,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090378619682923960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816825dec747c234a8ef2a0059b3d816, type: 3}
+  m_Script: {fileID: 11500000, guid: 37c1a713792a68343a43c79c481ff5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  Cheese: {fileID: 0}
+  audio: {fileID: 51728202}
+  c: 100
+  text: 
+--- !u!114 &6814668243473111574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090378619682923960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766e1565b6d18ed4691fe879a877e788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  minDist: 10
   target: {fileID: 5279188655676274217, guid: b1df2422e32ea234cb5ef4d57d83cd45, type: 3}
   dog: {fileID: 5279188655676274217, guid: b1df2422e32ea234cb5ef4d57d83cd45, type: 3}
