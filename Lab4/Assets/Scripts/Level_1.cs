@@ -14,12 +14,14 @@ public class Level_1 : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collider2D) {
         StartCoroutine("Beep");
         print("Entered..");
-        
+        American.GetComponent<Renderer>().material.color = Color.red;
+        c--;
         StopCoroutine("Beep");
     }
     public void OnTriggerExit2D(Collider2D collider2D) {
         StopCoroutine("Beep");
     }
+
     IEnumerator Beep()
     {
         if (GetComponent<Collider2D>().gameObject.CompareTag("Player")) {
