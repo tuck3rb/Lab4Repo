@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject curtain;
     public GameObject canvas;
     public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI TimerText;
     private int score;
+    private int timer = 60;
     private bool raiseLower = false;
     //public GameObject mainScreen;
     //public GameObject menuButton;
@@ -92,16 +94,24 @@ public class GameManager : MonoBehaviour
         score++;
         ScoreText.text = "Score: " + score;
     }
+
+    public IEnumerator incTimer(){
+        while (timer > 0) {
+            yield return new WaitForSeconds(1f);
+            timer--;
+            TimerText.text = "Time: " + timer;
+        }
+        StartCoroutine(LoadYourAsyncScene("Menu"));
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("incTimer");
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {   
     }
 }
