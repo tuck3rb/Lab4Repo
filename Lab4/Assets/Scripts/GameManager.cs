@@ -92,7 +92,11 @@ public class GameManager : MonoBehaviour
 
     public void incScore(){
         score++;
-        ScoreText.text = "Score: " + score;
+        ScoreText.text = "Cheese: " + score;
+    }
+
+    public void showWin(){
+        DialogShow("You ate" + score + "cheese!");
     }
 
     public IEnumerator incTimer(){
